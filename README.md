@@ -74,6 +74,16 @@ Consult the React Native documentation on how to [install React Native using Coc
     }
     ```
 
+4. Prevent activity restart on orientation changes (in AndroidManifest.xml)
+
+    ```
+    <activity
+      ...
+      android:configChanges="orientation|screenSize"
+      ...
+    >
+    ```     
+
 ### Configuration
 
 #### iOS
@@ -120,7 +130,7 @@ Implement onConfigurationChanged method (in MainActivity.java)
 ## Usage
 
 Whenever you want to use it within React Native code now you can:
-`var Orientation = require('react-native-orientation');`
+`import Orientation from 'react-native-orientation';`
 
 ```javascript
   _orientationDidChange: function(orientation) {
