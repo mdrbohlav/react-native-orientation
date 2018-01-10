@@ -58,25 +58,7 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
       break;
 
     default:
-      // orientation is unknown, we try to get the status bar orientation
-      switch ([[UIApplication sharedApplication] statusBarOrientation]) {
-        case UIInterfaceOrientationPortrait:
-          orientationStr = @"PORTRAIT";
-          break;
-        case UIInterfaceOrientationLandscapeLeft:
-        case UIInterfaceOrientationLandscapeRight:
-
-          orientationStr = @"LANDSCAPE";
-          break;
-
-        case UIInterfaceOrientationPortraitUpsideDown:
-          orientationStr = @"PORTRAITUPSIDEDOWN";
-          break;
-
-        default:
-          orientationStr = @"UNKNOWN";
-          break;
-      }
+      orientationStr = @"UNKNOWN";
       break;
   }
   return orientationStr;
@@ -102,25 +84,7 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
       break;
 
     default:
-      // orientation is unknown, we try to get the status bar orientation
-      switch ([[UIApplication sharedApplication] statusBarOrientation]) {
-        case UIInterfaceOrientationPortrait:
-          orientationStr = @"PORTRAIT";
-          break;
-        case UIInterfaceOrientationLandscapeLeft:
-        case UIInterfaceOrientationLandscapeRight:
-
-          orientationStr = @"LANDSCAPE";
-          break;
-
-        case UIInterfaceOrientationPortraitUpsideDown:
-          orientationStr = @"PORTRAITUPSIDEDOWN";
-          break;
-
-        default:
-          orientationStr = @"UNKNOWN";
-          break;
-      }
+      orientationStr = @"UNKNOWN";
       break;
   }
   return orientationStr;
